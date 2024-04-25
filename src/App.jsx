@@ -46,16 +46,17 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Login />,
-        action: RegisterAction(queryClient),
+        action: RegisterAction
       },
       {
         path: "login",
         element: <Register />,
-        action:LoginAction(queryClient)
+        action:LoginAction
       }
       , {
         path: 'dashboard',
-        element: <Dashboard queryClient={queryClient} />,
+        element: <Dashboard queryClient={queryClient}
+         />,
         loader: DashboardLoader(queryClient),
 
         children: [

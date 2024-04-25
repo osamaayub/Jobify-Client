@@ -33,7 +33,7 @@ const Dashboard = () => {
   const navigation = useNavigation();
   const isPageLoading = navigation.state === 'loading';
   const [showSidebar, setShowSidebar] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme());
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [isAuthError, setIsAuthError] = useState(false);
 
   const toggleDarkTheme = () => {

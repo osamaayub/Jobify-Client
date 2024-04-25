@@ -48,14 +48,16 @@ const loginDemo=async()=>{
             type="email"
             label="email"
             labelText="email"
+            name="email"
           />
           <FormRow
             type="password"
             label="password"
             labelText="Password"
+            name="password"
           />
        <SubmitBtn/>
-        <button type="button" className="btn btn-block" onClick={loginDemo}>
+        <button type="submit" className="btn btn-block" onClick={loginDemo}>
          Explore the App
         </button>
         <p>
