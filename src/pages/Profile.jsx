@@ -12,7 +12,7 @@ export const action = (queryClient) => async ({ request }) => {
   const file = formData.get('avatar');
   file && file.size > 5000 ? toast.error("Image Size too Large") : null;
   try {
-    await CustomFetch.patch("/users/update-user", formData);
+    await CustomFetch.patch("/users/update-user/:id", formData);
     queryClient.invalidateQueries(['user']);
     toast.success("file uploaded sucessfully");
     return redirect("/dashboard");

@@ -46,14 +46,12 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Login />,
-        action: LoginAction(queryClient),
-        errorElement: <ErrorElement />
+        action: RegisterAction(queryClient),
       },
       {
         path: "login",
         element: <Register />,
-        action: RegisterAction(queryClient),
-        errorElement: <ErrorElement />
+        action:LoginAction(queryClient)
       }
       , {
         path: 'dashboard',

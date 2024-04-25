@@ -15,3 +15,7 @@ export const JOB_SORT_BY={
   ASCENDING:"ascending",
   DESCENDING:"descending"
 }
+
+export const config = {
+  BASE_BACKEND_URL: import.meta.env.VITE_BASE_BACKEND_URL
+}

@@ -12,7 +12,7 @@ import { checkDefaultTheme } from '../App';
 const userQuery = {
   queryKey: ['user'],
   queryFn: async () => {
-    const { data } = await customFetch.get('/users/current-user');
+    const  data  = await customFetch.get('/users/current-user');
     return data;
   },
 };
@@ -28,7 +28,7 @@ export const loader = (queryClient) => async () => {
 const DashboardContext = createContext();
 
 const Dashboard = () => {
-  const {user}  = useQuery(userQuery).data;
+  const {user}  = useQuery(userQuery)?.data;
   const navigate = useNavigate();
   const navigation = useNavigation();
   const isPageLoading = navigation.state === 'loading';

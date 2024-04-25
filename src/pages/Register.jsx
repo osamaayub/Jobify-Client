@@ -7,10 +7,12 @@ import { toast } from "react-toastify";
 
 
 export const action = (queryClient) => async ({ request }) => {
+  console.log("hello from the action ")
   const formdata = request.formData();
-  const data = Object.fromEntries(formdata);
+  // const data = Object.fromEntries(formdata);
   try {
-    await CustomFetch.post("/auth/register", data);
+    const result = await CustomFetch.post("/auth/register",formdata);
+    console.log("Register API response: ", result)
     queryClient.invalidateQueries();
     toast.success("Registered Successfully");
     return redirect("/dashboard");
